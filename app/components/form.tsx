@@ -63,7 +63,7 @@ export default function Form() {
         </p>
       </div>
       <form
-        action="https://docs.google.com/forms/d/e/1FAIpQLSfqFtaZw2HWkcxzjPp-CWeMISd4BqB-N9n-AsCCYowECHL3oA/formResponse"
+        action="#"
         encType="text/plain"
         target="hidden_iframe"
         onSubmit={handleSubmit}
