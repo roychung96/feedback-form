@@ -16,9 +16,10 @@ export const sendFeedbackForm = async (formData: {
 
   const queryString = queryStringHelper(query);
   //https://stackoverflow.com/questions/51995070/post-data-to-a-google-form-with-ajax
-  const endPoints = `https://docs.google.com/forms/d/e/1HD4fh58kc66Ajux8QnmNmfDWTQ2GE0l0esU2Hm3JOLE/formResponse${
+  
+  const endPoints = `https://docs.google.com/forms/d/e/1FAIpQLSfqFtaZw2HWkcxzjPp-CWeMISd4BqB-N9n-AsCCYowECHL3oA/formResponse${
     queryString ? `?${queryString}` : ""
-  }`;
+  }&submit=Submit`;
 
   const sendFormResponse = await fetch(endPoints, {
     headers: { "Content-Type": "text/plain" },
