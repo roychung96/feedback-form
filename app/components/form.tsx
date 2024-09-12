@@ -19,20 +19,20 @@ export default function Form() {
 
     const formData = new FormData(event.currentTarget)
     console.log({formData})
-    const response = await fetch('/api/feedback', {
-      method: 'POST',
-      body: formData,
-    });
-    // const firstName = formData.get('firstName')as string;
-    // const lastName = formData.get('lastName')as string;
-    // const email = formData.get('email')as string;
-    // const message = formData.get('message')as string;
-    // const response = await sendFeedbackForm({
-    //   firstName,
-    //   lastName,
-    //   email,
-    //   message
-    // })
+    // const response = await fetch('/api/feedback', {
+    //   method: 'POST',
+    //   body: formData,
+    // });
+    const firstName = formData.get('firstName')as string;
+    const lastName = formData.get('lastName')as string;
+    const email = formData.get('email')as string;
+    const message = formData.get('message')as string;
+    const response = await sendFeedbackForm({
+      firstName,
+      lastName,
+      email,
+      message
+    })
     if (!response.ok) {
       console.error('Failed to submit the data. Please try again.');
     } else {
